@@ -7,11 +7,11 @@ mixin header(headerMods, currentUrl)
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Сделанные сайты"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Интересные блоки"
       },
     ]
 
@@ -19,11 +19,14 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         .header__logo
-        img(src="../../../img/sprite/logo-text.svg", alt="")
+          +icon("logo", 30, 30)
+          span  Игорь Щербаков
 
 
       else
         a.header__logo(href="#")
+          +icon("logo", 30, 30)
+          span  Игорь Щербаков
 
       nav.main-nav
         .main-nav__wrapper
